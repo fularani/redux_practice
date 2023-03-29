@@ -2,6 +2,7 @@ import Api from "./Api";
 
 import { TodoModel } from "../models/redux-models";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default{
     async getAllTodos() {
         var response=await Api().get('todos');
