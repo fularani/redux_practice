@@ -1,10 +1,10 @@
 import { CarRequestModel,CarResponseModel } from "../../models/redux-models";
 import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 
-const initialCarState:CarRequestModel={
+export const initialCarState:CarRequestModel={
     name:"",
     year:"",
-    imageUrl:""
+    imageUrl:"",
 }
 
 const carSlice=createSlice({
@@ -17,8 +17,9 @@ const carSlice=createSlice({
             state.name=action.payload.data.attributes.name;
             state.year=action.payload.data.attributes.year;
             state.imageUrl=action.payload.data.attributes.imageUrl;
+
         }
-    }
+    },
 })
 
 export default carSlice

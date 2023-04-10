@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import { CarRequestModel } from '../models/redux-models';
 import { useAppDispatch,useAppSelector } from "../hooks/hooks";
 import {postCars} from "../store/actions/car.actions"
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Car = () => {
 
@@ -50,6 +52,7 @@ const Car = () => {
 
   return (
     <div>
+        <ToastContainer/>
         <p>Create A New Car</p>
         <form className='d-flex flex-column' onSubmit={handleSubmit}>
             <div>
